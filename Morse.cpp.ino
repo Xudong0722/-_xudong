@@ -10,6 +10,7 @@ void setup()
 void loop()
 {
   char str[] = "";
+  char* tmp;
   while(Serial.available()>0)  //判断串口是否有数据读入
   {
     strcpy(str,(Serial.read()));
@@ -20,35 +21,44 @@ void loop()
     {
       if(str[i]==" ")
         continue;
+      
       switch(str[i]-96)
       {
-        case 1:Serial.println(".-  \n");break;
-        case 2:Serial.println("-...\n");break;
-        case 3:Serial.println("-.-.\n");break;
-        case 4:Serial.println("-.. \n");break;
-        case 5:Serial.println(".   \n");break;
-        case 6:Serial.println("..-.\n");break;
-        case 7:Serial.println("--. \n");break;
-        case 8:Serial.println("....\n");break;
-        case 9:Serial.println("..  \n");break;
-        case 10:Serial.println(".---\n");break;
-        case 11:Serial.println("-.- \n");break;
-        case 12:Serial.println(".-..\n");break;
-        case 13:Serial.println("--  \n");break;
-        case 14:Serial.println("-.  \n");break;
-        case 15:Serial.println("--- \n");break;
-        case 16:Serial.println(".--.\n");break;
-        case 17:Serial.println("--.-\n");break;
-        case 18:Serial.println(".-. \n");break;
-        case 19:Serial.println("... \n");break;
-        case 20:Serial.println("-   \n");break;
-        case 21:Serial.println("..- \n");break;
-        case 22:Serial.println("...-\n");break;
-        case 23:Serial.println(".-- \n");break;
-        case 24:Serial.println("-..-\n");break;
-        case 25:Serial.println("-.--\n");break;
-        case 26:Serial.println("--..\n");break;
+        case 1:tmp = ".-  ";break;
+        case 2:tmp = "-...";break;
+        case 3:tmp = "-.-.";break;
+        case 4:tmp = "-.. ";break;
+        case 5:tmp = ".   ";break;
+        case 6:tmp = "..-.";break;
+        case 7:tmp = "--. ";break;
+        case 8:tmp = "....";break;
+        case 9:tmp = "..  ";break;
+        case 10:tmp = ".---";break;
+        case 11:tmp = "-.- ";break;
+        case 12:tmp = ".-..";break;
+        case 13:tmp = "--  ";break;
+        case 14:tmp = "-.  ";break;
+        case 15:tmp = "--- ";break;
+        case 16:tmp = ".--.";break;
+        case 17:tmp = "--.-";break;
+        case 18:tmp = ".-. ";break;
+        case 19:tmp = "... ";break;
+        case 20:tmp = "-   ";break;
+        case 21:tmp = "..- ";break;
+        case 22:tmp = "...-";break;
+        case 23:tmp = ".-- ";break;
+        case 24:tmp = "-..-";break;
+        case 25:tmp = "-.--";break;
+        case 26:tmp = "--..";break;
   }
+  for(int i = 0;i<4;i++)
+  {
+    if(tmp[i] == '.')
+      morse.dot();
+    if(tmp[i] == '-')
+      morse.dash();
+  }
+  morse.c_space();
 }
   }
 }
