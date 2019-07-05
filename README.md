@@ -24,7 +24,7 @@
 
 ## 第四天（7月5日）
 #### 作业：不包含库实现Morse，要求在tinkercad网站成功模拟（文件名：Morse_noLibrary）
-1. 源码：
-2. 电路图：
-3. 模拟结果：
+1. 源码：Morse_noLibrary.ino
+2. 电路图：Morse电路图.png
+3. 模拟结果：效果模拟.png
 
