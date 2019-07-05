@@ -26,4 +26,5 @@
 #### 作业：不包含库实现Morse，要求在tinkercad网站成功模拟（文件名：Morse_noLibrary）
 1. 源码：
 2. 电路图：
+3. 模拟结果：
 
