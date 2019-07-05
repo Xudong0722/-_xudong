@@ -2,9 +2,9 @@
 
 ## 第一天
 #### 学习内容
-· 为什么学习开源硬件
-· 如何学习开源硬件
-· 三个软件：arduino，fritzing，processing
+##### 为什么学习开源硬件
+##### 如何学习开源硬件
+##### 三个软件：arduino，fritzing，processing
 
 ## 第二天
 #### 具备库的Morse，7月3日作业
